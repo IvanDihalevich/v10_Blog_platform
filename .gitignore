@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+TestResults/
+*.trx
+coverage*.json
+coverage*.xml
+*.DotSettings.user
