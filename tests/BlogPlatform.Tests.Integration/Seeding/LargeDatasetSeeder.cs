@@ -8,8 +8,9 @@ namespace BlogPlatform.Tests.Integration.Seeding;
 public static class LargeDatasetSeeder
 {
     /// <summary>
-    /// Inserts at least 10,000 rows across Posts, Comments, Tags, and PostTags using Bogus for natural text and dates.
-    /// Explicit control fields (slug uniqueness, flags, FKs) are set deterministically.
+    /// Наповнення для perf/інтеграційних сценаріїв: ≥10 000 рядків сукупно, Bogus для реалістичного тексту/дат.
+    /// Співвідношення близьке до реального блогу: багато коментарів на пост (~3–4), кілька тегів на пост, пул тегів.
+    /// Явно задаються: Slug, IsPublished, ViewCount, PostId у звʼязках, IsApproved у коментарях.
     /// </summary>
     public static async Task<int> SeedAsync(BlogDbContext db, CancellationToken cancellationToken = default)
     {
